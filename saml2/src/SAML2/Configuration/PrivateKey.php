@@ -27,6 +27,15 @@ class PrivateKey extends ArrayAdapter
      */
     private $name;
 
+
+    /**
+     * Constructor for PrivateKey.
+     *
+     * @param string $filePath
+     * @param string $name
+     * @param string|null $passphrase
+     * @throws \Exception
+     */
     public function __construct($filePath, $name, $passphrase = null)
     {
         if (!is_string($filePath)) {
@@ -46,6 +55,7 @@ class PrivateKey extends ArrayAdapter
         $this->name = $name;
     }
 
+
     /**
      * @return string
      */
@@ -53,6 +63,7 @@ class PrivateKey extends ArrayAdapter
     {
         return $this->filePath;
     }
+
 
     /**
      * @return bool
@@ -62,6 +73,7 @@ class PrivateKey extends ArrayAdapter
         return (bool) $this->passphrase;
     }
 
+
     /**
      * @return string
      */
@@ -69,6 +81,7 @@ class PrivateKey extends ArrayAdapter
     {
         return $this->passphrase;
     }
+
 
     /**
      * @return string
